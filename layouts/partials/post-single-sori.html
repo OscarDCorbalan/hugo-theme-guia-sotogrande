@@ -1,0 +1,33 @@
+<article class="post-full post">
+    <header class="post-full-header">
+        <section class="post-full-meta">
+            {{if .Params.Lastmod }}
+             <time class="post-full-meta-date"
+                datetime="{{.Lastmod.Format "2006-01-02"}}">
+                 Actualizado: {{ index $.Site.Data.meses (printf "%d" .Lastmod.Month) }} {{ .Lastmod.Year }}
+             </time>
+             {{ end }}
+            {{if .Params.tags }}
+                <span class="date-divider">/</span>
+                {{ range $index, $tag := .Params.tags }}
+                    {{if lt $index 2}}
+                        <a href="{{$.Site.BaseURL}}tags/{{ $tag | urlize }}/">#{{$tag}}</a>&nbsp;
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        </section>
+        <h1 class="post-full-title">{{.Title}}</h1>
+    </header>
+    {{if .Params.image}}
+      {{ partial "post-full-image" . }}
+    {{else}}
+    <figure class="post-full-image" style="background-image: url({{$.Site.BaseURL}}defimg/{{ index (seq 7 | shuffle) 0 }}.jpg)">
+    </figure>{{end}}
+
+    <section class="post-full-content">
+        <div class="kg-card-markdown">
+        {{ .Content }}
+        </div>
+    </section>
+
+</article>

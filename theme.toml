@@ -1,0 +1,17 @@
+name = "GS"
+license = "MIT"
+licenselink = "https://github.com/OscarDCorbalan/hugo-theme-guia-sotogrande/master/LICENSE.md"
+description = "Theme for Guia Sotogrande
+homepage = "https://github.com/OscarDCorbalan/hugo-theme-guia-sotogrande"
+tags = ["blog","pages","ghost theme"]
+features = ["disqus", "google analytics"]
+min_version=0.31
+
+[author]
+  name = "Oscar D. Corbalan"
+  homepage = "https://www.oscardc.com/"
+
+[original]
+  name = "Casper"
+  homepage = "https://github.com/TryGhost/Casper"
+  repo = "https://github.com/TryGhost/Casper"

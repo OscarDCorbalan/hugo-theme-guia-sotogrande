@@ -1,0 +1,18 @@
+<article class="post-card post">
+  {{ partial "post-card-image-link" . }}
+
+    <div class="post-card-content">
+      <a class="post-card-content-link" href="{{ .Permalink }}">
+          <header class="post-card-header">
+              {{if .Params.tags }}<span class="post-card-tags">{{ range $index, $tag := .Params.tags }}
+              #{{$tag}} {{end}} </span>
+              {{ end }}
+              <h2 class="post-card-title">{{.Title}}</h2>
+          </header>
+      </a>
+      <section class="post-card-excerpt" style="padding: 0 25px;">
+          {{ .Content }}
+      </section>
+
+    </div>
+</article>

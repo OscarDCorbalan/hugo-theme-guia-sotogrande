@@ -1,2 +1,11 @@
-# hugo-theme-guia-sotogrande
-Hugo theme for https://www.guiasotogrande.com, a tourism site containing information about the maringa, golf, polo and events in Sotogrande, Alcaidess and around San Roque
+# Hugo Theme v2 for Guia Sotogrande
+
+Live site at https://www.guiasotogrande.com
+
+## Supports
+
+  * Disqus
+  * Analytics
+  * OpenGraph meta
+  * Twitter meta
+  *

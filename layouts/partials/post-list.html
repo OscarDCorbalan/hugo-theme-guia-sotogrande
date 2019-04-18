@@ -1,0 +1,6 @@
+{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") }}
+{{ range $paginator.Pages }}
+
+  {{ partial "post-card-post" . }}
+  
+{{ end }}

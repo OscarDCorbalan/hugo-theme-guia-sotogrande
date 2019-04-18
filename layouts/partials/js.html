@@ -1,0 +1,17 @@
+{{ with .Site.Params.googleAnalytics }}
+    {{ "<!-- Global site tag (gtag.js) - Google Analytics -->" | safeHTML }}
+    <script>
+        if (window.location.host.indexOf('localhost') < 0) {
+            var s = document.createElement('script');
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=UA-135544906-1';
+            s.async = true;
+            document.head.appendChild(s);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-135544906-1');
+        }
+    </script>
+
+{{ end }}
